@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="kr">
+    <head>
+        <!-- meta : 브라우저에서 소스코드를 보지않는한 뷰어에 표시되지않는 정보
+            웹페이지에 대한 설명
+            검색엔진이 웹 페이지에서 검색결과에 반환할 정보를 처리 -->
+        <meta charset="UTF-8"> 
+        <!-- 모바일, 창크기 등에의한 페이지 너비, 화면 배율등 설정 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="style.css">
+        <title>QY WebPage</title>
+        <!--
+            FontAwesome 무료아이콘 연동
+        -->
+        <script
+        src="https://kit.fontawesome.com/cb915ad2f4.js"
+        crossorigin="anonymous">
+        </script>
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <nav class="navBar">
+            <div class="navBar_Logo">
+                <i class="fa-solid fa-dice-d20"></i>
+                <a href="">QYnote WebPage</a>
+            </div>
+            <ul class="navBar_Menu">
+                <!-- (li>a)*5 : li.a 5개 생성 -->
+                <li>
+                    <i class="fa-solid fa-house"></i>
+                    <a href="">Home</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-user"></i>
+                    <a href="">Info</a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-folder-open"></i>
+                    <a href="">Portfolio</a>
+                </li>
+                <li>
+                    <i class="fa-brands fa-google-play"></i>
+                    <a href="">Play</a>
+                </li>
+            </ul>
+            
+            <ul class="navBar_Link">
+                <li>
+                    <i class="fa-brands fa-github"></i>
+                </li>
+            </ul>
+
+            <a class="navBar_Toggle">
+                <i class="fa-solid fa-bars"></i>
+            </a>
+        </nav>
+    </body>
+</html>

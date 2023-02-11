@@ -1,0 +1,103 @@
+:root{
+    --txt_color: #ffffff;
+    --btn_Hover_Color: #191970;
+    --img_Accent: #ffffff;
+}
+
+body{
+    margin: 0;
+}
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: cornflowerblue;
+    padding: 8px 12px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--txt_color);
+}
+
+.navBar_Logo{
+    font-size: 24px;
+    color:var(--img_Accent);
+    padding-left: 12px;
+}
+
+.navBar_Menu{
+    color: var(--img_Accent);
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navBar_Menu li{
+    padding: 8px 12px;
+}
+
+.navBar_Menu li:hover{
+    background-color: var(--btn_Hover_Color);
+    border-radius: 8px;
+}
+
+.navBar_Link{
+    color: var(--img_Accent);
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.navBar_Link li{
+    padding: 8px 12px;
+}
+
+.navBar_Link li:hover{
+    background-color: var(--btn_Hover_Color);
+    border-radius: 8px;
+}
+
+.navBar_Toggle{
+    display: none;
+    position: absolute;
+    right: 18px;
+    font-size: 24px;
+    color: var(--txt_color);
+}
+
+/*좌우 좁혀졌을때 셋팅*/
+@media screen and (max-width:700px){
+    .navBar{
+        flex-direction: column;
+        align-items:flex-start;
+    }
+
+    .navBar_Menu{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        display: none;
+    }
+
+    .navBar_Menu li{
+        text-align: center;
+        width: 100%;
+    }
+
+    .navBar_Link {
+        justify-content: center;
+        width: 100%;
+        display: none;
+    }
+
+    .navBar_Toggle{
+        display: block;
+    }
+
+    .navBar_Menu.active,
+    .navBar_Link.active{
+        display: flex;
+    }
+}
