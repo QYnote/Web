@@ -1,98 +1,145 @@
 :root{
-    --txt_color: #ffffff;
-    --btn_Hover_Color: #191970;
-    --img_Accent: #ffffff;
+    --Ctrl_BackColor : cornflowerblue;
+    --Ctrl_HoverColor: #191970;
+    --Ctrl_TxtColor: #ffffff;
+    --Ctrl_IconColor: #ffffff;
 }
 
 body{
     margin: 0;
 }
 
-.navBar{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: cornflowerblue;
-    padding: 8px 12px;
-}
-
+/*하이퍼링크 공통 Set*/
 a {
     text-decoration: none;
-    color: var(--txt_color);
+}
+
+/*상단메뉴*/
+.navBar{
+    height: 52px;
+    background-color: var(--Ctrl_BackColor);
+    display: flex;
+    /*space-between : Ctrl들을 양끝에 붙이고 사이에 일정간격 배치*/
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*상단메뉴 하이퍼링크 공통 Set*/
+.navBar a{
+    color: var(--Ctrl_TxtColor);
 }
 
 .navBar_Logo{
-    font-size: 24px;
-    color:var(--img_Accent);
     padding-left: 12px;
-}
-
-.navBar_Menu{
-    color: var(--img_Accent);
-    display: flex;
-    list-style: none;
-    padding-left: 0;
-}
-
-.navBar_Menu li{
-    padding: 8px 12px;
-}
-
-.navBar_Menu li:hover{
-    background-color: var(--btn_Hover_Color);
-    border-radius: 8px;
-}
-
-.navBar_Link{
-    color: var(--img_Accent);
-    display: flex;
-    list-style: none;
-    padding-left: 0;
-}
-
-.navBar_Link li{
-    padding: 8px 12px;
-}
-
-.navBar_Link li:hover{
-    background-color: var(--btn_Hover_Color);
-    border-radius: 8px;
-}
-
-.navBar_Toggle{
-    display: none;
-    position: absolute;
-    right: 18px;
+    color:var(--Ctrl_IconColor);
     font-size: 24px;
-    color: var(--txt_color);
+    cursor: pointer;
+}
+
+/*상단메뉴 모듈 버튼 리스트*/
+.navBar_Menu{
+    color: var(--Ctrl_IconColor);
+    display: flex;
+    list-style: none;
+}
+
+.navBar_Menu button{
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 14px;
+    padding-right: 14px;
+
+    border-radius: 8px;
+    color: var(--Ctrl_IconColor);
+    background-color: var(--Ctrl_BackColor);
+    border: none;
+
+    font-size: 18px;
+}
+
+
+/*상단메뉴 button 공통 Set*/
+.navBar button:hover{
+    background-color: var(--Ctrl_HoverColor);
+    cursor: pointer;
+}
+
+/*상단메뉴 링크 버튼 리스트*/
+.navBar_Link{
+    display: flex;
+    list-style: none;
+}
+
+.navBar_Link button{
+    background-color: var(--Ctrl_BackColor);
+    border: none;
+    border-radius: 8px;
+
+    padding: 8px;
+    color: var(--Ctrl_IconColor);
+    font-size: 20px;
+}
+
+/*화면 축소상태가 아닐 때 Toggle 버튼*/
+.navBar_Toggle{
+    position: absolute;
+    right: 10px;
+    padding-top: 4px;
+    color: var(--Ctrl_TxtColor);
+    font-size: 26px;
+    display: none;
+    background-color: var(--Ctrl_BackColor);
+    border: none;
+    border-radius: 8px;
 }
 
 /*좌우 좁혀졌을때 셋팅*/
-@media screen and (max-width:700px){
+/* @media screen and (max-width:700px){ */
+@media screen and (max-aspect-ratio:11/16){
     .navBar{
+        height: 52px;
+        color: var(--Ctrl_BackColor);
         flex-direction: column;
         align-items:flex-start;
     }
 
+    .navBar_Logo {
+        top: 10px;
+        position: relative;
+    }
+    
     .navBar_Menu{
+        z-index: 1;
+        width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-bottom: 0px;
+        background-color: var(--Ctrl_BackColor);
         flex-direction: column;
         align-items: center;
-        width: 100%;
         display: none;
     }
 
-    .navBar_Menu li{
-        text-align: center;
+    .navBar_Menu button{
         width: 100%;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin-left: 0px;
+        text-align: center;
     }
 
     .navBar_Link {
-        justify-content: center;
         width: 100%;
+        margin-top: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        background-color: var(--Ctrl_BackColor);
+        justify-content: center;
         display: none;
     }
 
     .navBar_Toggle{
+        top: 8px;
         display: block;
     }
 

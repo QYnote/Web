@@ -8,17 +8,27 @@
         <!-- 모바일, 창크기 등에의한 페이지 너비, 화면 배율등 설정 -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <title>QY WebPage</title>
-        <!--jQuery 공식사이트 제공 라이브러리 호출 URL-->
+        <title>QY WebPage - Play</title>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
             $(function(){
                 $("#nav-placeholder").load("TopMenu.html");
             });
         </script>
+        <script src="play.js" dfer></script>
     </head>
     <body>
         <!--상단 메뉴-->
         <div id="nav-placeholder"></div>
+
+        <nav class="Page">
+            <ul>
+                <button class = "BtnNum">1</button>
+                <button class = "BtnNum">2</button>
+                <button class = "BtnNum">3</button>
+            </ul>
+            <p id = "Num">4564</p>
+            <p id = "Result">4567465</p>
+        </nav>
     </body>
 </html>
